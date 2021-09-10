@@ -49,27 +49,6 @@
     </div>
     
     <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
-    <script>
-     
-        let btn = document.querySelector('span');
-
-        btn.addEventListener('click', function() {
-            let input = document.querySelector('#password');
-            console.log(input)
-
-            if(input.getAttribute('type') == 'password') {
-                console.log('Senha')
-                input.setAttribute('type', 'text');
-                btn.className = 'bi bi-eye-slash-fill'
-            } else {
-                console.log('Não Senha')
-                input.setAttribute('type', 'password');
-                btn.classList.remove(".bi.bi-eye-slash-fill");
-                btn.className = 'bi bi-eye-fill'
-            }
-
-        });
-
-    </script>
+    <script src="{% static 'js/login.js' %}"></script>
 </body>
 </html>
