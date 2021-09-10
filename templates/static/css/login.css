@@ -19,7 +19,8 @@ h1{
 }
 .container_login {
     width: 500px;
-    height: 400px;
+    padding: 10px;
+    /* height: 450px; */
     border-radius: 10px;
     position: absolute;
     top: 50%;
@@ -27,9 +28,6 @@ h1{
     transform: translate(-50%, -50%);
     color: rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
-}
-.div_login{
-    margin: 50px 20px;
 }
 
 .div_CPF{
@@ -85,23 +83,4 @@ h1{
     padding-left: 4px;
     font-size: 15px;
     transition: 0.2s;
-}
-
-.botão{
-    margin-top: 60px;
-    width: 460px;
-    height: 50px;
-    color: white;
-    background-color: #74a9d8;
-    font-size: 12.5px;
-    border-radius: 4px;
-    border: #9696965d 1px solid;
-
-}
-
-.botão:hover {
-    background-color: #0583F2;
-    border: #dadada 1px solid;
-    color: white;
-    cursor: pointer;
 }

@@ -18,35 +18,36 @@
     
     <img class='logo-tech' src="{% static 'images/logo.png' %}" alt="logo">
     <div class="container_login">
-        <h1>Acesso Restrito</h1> 
-        <div class="div_login">
+        {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>{{message}}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+        {% endif %}
+
+        <h3 class="text-center mt-4">Acesso Restrito</h3> 
+        
+        <div class="div_login p-3">
             <form method="POST">
                 {% csrf_token %}
                 <div class="div_CPF">                
                     <input type="text" name="CPF" id="CPF" class="campo_dados" required>
                     <label for="CPF" title="Preencha este campo." class="label_dados">CPF</label>
-            </div>
-                <div class="div_senha">
+                </div>
+                <div class="div_senha mb-5">
                     <input type='password' name="password" id="password" class="campo_dados" required>
                     <label for="Senha" title="Preencha este campo." class="label_dados">Senha</label>
                     <span class='bi bi-eye-fill'></span>
                 </div>
-                <button type="submit" name="continuar" id="continuar" class="botão"><b></b>CONTINUAR</b></button>
-            </div>
+                <div class="d-grid gap-2 mt-3">
+                    <button type="submit" name="continuar" id="continuar" class="btn btn-primary btn-lg">CONTINUAR</button>
+                </div>
             </form>
-            
-        </div>
-        
+        </div>        
     </div>
-    {% if messages %}
-        {% for message in messages %}
-        <div class="alert alert-warning alert-dismissible fade show" role="alert">
-            <strong>{{message}}</strong>
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-          </div>
-
-        {% endfor %}
-    {% endif %}
+    
     <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
     <script>
      
