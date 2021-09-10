@@ -38,7 +38,7 @@ def loginPage(request):
             login(request, user)
             return render(request, 'accounts/home.html')
         else:
-            messages.info(request, 'Username Or password is incorrect ')
+            messages.info(request, 'CPF ou senha incorreta!' )
     context = {}
     return render(request, 'accounts/login.html')
 
