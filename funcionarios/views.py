@@ -21,11 +21,11 @@ def registerPage(request):
         form = UserCreationForm(request.POST)
         if form.is_valid():
             messages.add_message(request, messages.SUCCESS, 'Usuário cadastrado com sucesso.')
-            form.save
+            form.save()
 
     context = {'form': form}
 
-    return render(request, 'accounts/register.html')
+    return render(request, 'accounts/register.html', context)
 
 def loginPage(request):
     if request.method == 'POST':
