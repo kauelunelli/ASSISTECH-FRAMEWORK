@@ -36,7 +36,7 @@ def loginPage(request):
 
         if user is not None:
             login(request, user)
-            return render(request, 'accounts/home.html')
+            return render(request, 'accounts/dashboard.html')
         else:
             messages.info(request, 'CPF ou senha incorreta!' )
     context = {}
@@ -48,5 +48,5 @@ def logoutUser(request):
 
 @login_required(login_url='login')
 def home(request):
-    return render(request, 'accounts/home.html')
+    return render(request, 'accounts/dashboard.html')
 
